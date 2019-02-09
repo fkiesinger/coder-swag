@@ -10,20 +10,16 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
 
+    //Image und Label deklarieren, die im TableView vorhanden sind
+    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak var categoryTitle: UILabel!
     
-    @IBOutlet weak var categoriyImage: UIImageView!
-    @IBOutlet weak var categoryLabel: UILabel!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //Bild und Label für ausgewählte Zelle festlegen
+    func updateViews(category: Category) {
+        categoryImage.image = UIImage(named: category.imageName)
+        categoryTitle.text = category.title
     }
 
 }

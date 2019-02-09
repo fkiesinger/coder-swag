@@ -15,6 +15,9 @@
 		D0B50556220F328000112478 /* coder_swagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50555220F328000112478 /* coder_swagTests.swift */; };
 		D0B50561220F328000112478 /* coder_swagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50560220F328000112478 /* coder_swagUITests.swift */; };
 		D0B50572220F3BBF00112478 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50571220F3BBF00112478 /* CategoryCell.swift */; };
+		D0B50574220F3E6C00112478 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50573220F3E6C00112478 /* Category.swift */; };
+		D0B50577220F3FF700112478 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50576220F3FF700112478 /* DataService.swift */; };
+		D0B50579220F6A3C00112478 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50578220F6A3C00112478 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		D0B50560220F328000112478 /* coder_swagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coder_swagUITests.swift; sourceTree = "<group>"; };
 		D0B50562220F328000112478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B50571220F3BBF00112478 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		D0B50573220F3E6C00112478 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D0B50576220F3FF700112478 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D0B50578220F6A3C00112478 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,11 @@
 		D0B5053F220F327E00112478 /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
-				D0B50570220F3B7800112478 /* Controller */,
+				D0B50575220F3FE600112478 /* Services */,
 				D0B5056F220F3B6B00112478 /* View */,
 				D0B5056E220F3B6500112478 /* Model */,
+				D0B50570220F3B7800112478 /* Controller */,
 				D0B50540220F327E00112478 /* AppDelegate.swift */,
-				D0B50542220F327E00112478 /* CategoriesVC.swift */,
 				D0B50544220F327E00112478 /* Main.storyboard */,
 				D0B50547220F328000112478 /* Assets.xcassets */,
 				D0B50549220F328000112478 /* LaunchScreen.storyboard */,
@@ -133,6 +139,7 @@
 		D0B5056E220F3B6500112478 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0B50573220F3E6C00112478 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B50571220F3BBF00112478 /* CategoryCell.swift */,
+				D0B50578220F6A3C00112478 /* ProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,8 +156,17 @@
 		D0B50570220F3B7800112478 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0B50542220F327E00112478 /* CategoriesVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0B50575220F3FE600112478 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0B50576220F3FF700112478 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +303,9 @@
 				D0B50543220F327E00112478 /* CategoriesVC.swift in Sources */,
 				D0B50541220F327E00112478 /* AppDelegate.swift in Sources */,
 				D0B50572220F3BBF00112478 /* CategoryCell.swift in Sources */,
+				D0B50579220F6A3C00112478 /* ProductCell.swift in Sources */,
+				D0B50574220F3E6C00112478 /* Category.swift in Sources */,
+				D0B50577220F3FF700112478 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +481,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNVP594T8;
 				INFOPLIST_FILE = "coder-swag/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "core.coder-swag";
+				PRODUCT_BUNDLE_IDENTIFIER = "coredev.coder-swag";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -478,12 +499,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNVP594T8;
 				INFOPLIST_FILE = "coder-swag/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "core.coder-swag";
+				PRODUCT_BUNDLE_IDENTIFIER = "coredev.coder-swag";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
